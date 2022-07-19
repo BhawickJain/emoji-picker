@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function EmojiPicker(): JSX.Element {
-  const [EmojiArray, setEmojiArray] = useState<string[]>(["👻", "🤠"])
+  const [EmojiArray, setEmojiArray] = useState<string[]>(["👻", "🤠"]);
 
   const handleHowdy = () => {
     shiftEmojiWith("🤠");
@@ -16,7 +16,8 @@ export default function EmojiPicker(): JSX.Element {
   };
 
   const shiftEmojiWith = (emoji: string): void => {
-    const currentEmojiArray = EmojiArray.length > 4 ? EmojiArray.slice(1) : EmojiArray
+    const currentEmojiArray =
+      EmojiArray.length > 4 ? EmojiArray.slice(1) : EmojiArray;
     setEmojiArray(() => [...currentEmojiArray, emoji]);
   };
 
@@ -26,9 +27,11 @@ export default function EmojiPicker(): JSX.Element {
       <button onClick={handleHowdy}>🤠</button>
       <button onClick={handleLaugh}>😀</button>
       <button onClick={handleApple}>🍎</button>
-      {
-        EmojiArray.map((emoji, index) => <p key={index}>Emoji {index + 1}: {emoji}</p>)
-      }
+      {EmojiArray.map((emoji, index) => (
+        <p key={index}>
+          Emoji {index + 1}: {emoji}
+        </p>
+      ))}
       <hr />
     </>
   );
