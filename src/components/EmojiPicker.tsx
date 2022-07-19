@@ -7,21 +7,21 @@ export default function EmojiPicker(): JSX.Element {
     useState("🤠");
 
   const handleHowdy = () => {
-    shiftEmojiWith("🤠")
-  }
+    shiftEmojiWith("🤠");
+  };
 
   const handleLaugh = () => {
-    shiftEmojiWith("😀")
-  }
+    shiftEmojiWith("😀");
+  };
 
   const handleApple = () => {
-    shiftEmojiWith("🍎")
-  }
+    shiftEmojiWith("🍎");
+  };
 
   const shiftEmojiWith = (emoji: string): void => {
-    queueRerenderWithNewEmojiOne(EmojiTwoFromCurrentRender)
-    queueRerenderWithNewEmojiTwo(emoji)
-  }
+    queueRerenderWithNewEmojiOne(EmojiTwoFromCurrentRender);
+    queueRerenderWithNewEmojiTwo(emoji);
+  };
 
   return (
     <>
