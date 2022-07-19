@@ -19,8 +19,8 @@ export default function EmojiPicker(): JSX.Element {
   };
 
   const shiftEmojiWith = (emoji: string): void => {
-    queueRerenderWithNewEmojiOne(EmojiTwoFromCurrentRender);
-    queueRerenderWithNewEmojiTwo(emoji);
+    queueRerenderWithNewEmojiOne(() => EmojiTwoFromCurrentRender);
+    queueRerenderWithNewEmojiTwo(() => emoji);
   };
 
   return (
