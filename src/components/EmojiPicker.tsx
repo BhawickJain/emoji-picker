@@ -2,10 +2,6 @@ import { useState } from "react";
 
 export default function EmojiPicker(): JSX.Element {
   const [EmojiArray, setEmojiArray] = useState<string[]>(["👻", "🤠"])
-  const [EmojiOneFromCurrentRender, queueRerenderWithNewEmojiOne] =
-    useState("👻");
-  const [EmojiTwoFromCurrentRender, queueRerenderWithNewEmojiTwo] =
-    useState("🤠");
 
   const handleHowdy = () => {
     shiftEmojiWith("🤠");
